@@ -1,0 +1,22 @@
+<h2> Contacts Master Index</h2>
+
+<div>
+  <%= form_tag "/client/contacts", method: :get do %>
+    <input type="text" name="search">
+    <input type="submit" value="Search Name">
+  <% end %>
+</div>
+
+<% @contacts.each do |contact| %>
+
+<h2><a href="/client/contacts/<%= contact['id'] %>">
+    <%= contact["last_name"] %>, <%= contact["first_name"] %> <%= contact["middle_name"] %></a></h2>
+    <p>City: <%= contact["city"] %><br>
+    Email <%= contact["email"] %><br>
+    Cell Phone: <%= contact["cell_phone"] %><br>
+    Bio: <%= contact["bio"] %></p><br>
+<% end %>
+<br>
+<br>
+<h4><a href="/client/contacts/new">Create New Contact</a></h4>
+

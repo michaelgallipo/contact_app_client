@@ -1,0 +1,12 @@
+<h1> Individual Contact Page </h1>
+
+<h2><%= @contact["last_name"] %>, <%= @contact["first_name"] %> <%= @contact["middle_name"] %></a></h2>
+<b>City: <%= @contact["city"] %><br>
+Email <%= @contact["email"] %><br>
+Cell Phone: <%= @contact["cell_phone"] %><br>
+Bio: <%= @contact["bio"] %></b><br>
+<br>
+<a href="/client/contacts/<%= @contact['id'] %>/edit"> Edit Contact</a><br>
+<a href="/client/contacts/<%= @contact['id'] %>" data-method="delete">Delete Contact</a>
+
+<h4><a href="/client/contacts">Contacts Index</a></h4>
