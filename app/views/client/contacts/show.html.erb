@@ -4,6 +4,7 @@
 <b>City: <%= @contact["city"] %><br>
 Email <%= @contact["email"] %><br>
 Cell Phone: <%= @contact["cell_phone"] %><br>
+Group: <%= @contact["groups"][0]["name"] %><br>
 Bio: <%= @contact["bio"] %></b><br>
 <br>
 <a href="/client/contacts/<%= @contact['id'] %>/edit"> Edit Contact</a><br>

@@ -14,6 +14,9 @@
     <p>City: <%= contact["city"] %><br>
     Email <%= contact["email"] %><br>
     Cell Phone: <%= contact["cell_phone"] %><br>
+    Group: <% contact["groups"].each do |group| %>
+    <%= group["name"] %>
+    <% end %><br>
     Bio: <%= contact["bio"] %></p><br>
 <% end %>
 <br>
